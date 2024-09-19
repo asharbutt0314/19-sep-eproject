@@ -1,0 +1,71 @@
+﻿@model bus_reservation.Models.Employee
+
+@{
+    ViewData["Title"] = "Add Employee";
+    Layout = "~/Views/Shared/Adminlayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="form-container">
+        <h1>Add Employee</h1>
+        <form asp-action="AddEmployee">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Employee Name Field -->
+            <div class="form-group mt-3">
+                <label asp-for="Username" class="control-label">Employee Username</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="EmployeeEmail" class="control-label">Employee Email</label>
+                <input asp-for="EmployeeEmail" class="form-control" />
+                <span asp-validation-for="EmployeeEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="Name" class="control-label">Employee Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <!-- Password Field -->
+            <div class="form-group mt-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <!-- Contact Number Field -->
+            <div class="form-group mt-3">
+                <label asp-for="ContactNumber" class="control-label"></label>
+                <input asp-for="ContactNumber" class="form-control" />
+                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+
+            <!-- Location Field -->
+            <div class="form-group mt-3">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <!-- Qualification Field -->
+            <div class="form-group mt-3">
+                <label asp-for="Qualification" class="control-label"></label>
+                <input asp-for="Qualification" class="form-control" />
+                <span asp-validation-for="Qualification" class="text-danger"></span>
+            </div>
+
+            <!-- Age Field -->
+            <div class="form-group mt-3">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
